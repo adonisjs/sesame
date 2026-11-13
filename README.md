@@ -23,11 +23,13 @@ node ace migration:run
 
 Then configure your issuer and scopes in `config/sesame.ts`, mount the OAuth routes, and connect your login and consent pages.
 
-See the [getting started guide](https://sesame.julr.dev/guides/getting-started/) for the full setup, or the [Kysely guide](https://sesame.julr.dev/guides/install-kysely/) for a Lucid-free application.
+See the [installation guide](https://docs.adonisjs.com/guides/oauth-server/introduction#installation) for the full setup, including the Kysely store for a Lucid-free application.
 
 ## Documentation
 
-[Read the documentation](https://sesame.julr.dev) for guides, API reference, and examples. Coming from `@julr/sesame`? Follow the [package rename guide](https://sesame.julr.dev/migrations/julr-to-adonisjs/). Upgrading an existing installation? Follow the [0.8 migration guide](https://sesame.julr.dev/migrations/0-7-to-0-8/) or the [0.7 migration guide](https://sesame.julr.dev/migrations/0-6-to-0-7/).
+[Read the documentation](https://docs.adonisjs.com/guides/oauth-server/introduction) on the AdonisJS website for guides and the API reference.
+
+Coming from `@julr/sesame`? Follow the [package rename guide](docs/migrations/julr-to-adonisjs.md). Upgrading an existing installation? Follow the [0.8 migration guide](docs/migrations/0.7-to-0.8.md) or the [0.7 migration guide](docs/migrations/0.6-to-0.7.md).
 
 ## License
 
