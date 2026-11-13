@@ -12,7 +12,7 @@ export type * from './storage/types.ts'
  *
  * @example
  * ```ts
- * declare module '@julr/sesame/types' {
+ * declare module '@adonisjs/sesame/types' {
  *   interface SesameScopes extends InferScopes<typeof sesameConfig> {}
  * }
  * ```
@@ -43,7 +43,7 @@ export type GrantableScope = Scope | BuiltinScope
  *
  * @example
  * ```ts
- * declare module '@julr/sesame/types' {
+ * declare module '@adonisjs/sesame/types' {
  *   interface SesameGrantContext {
  *     teamMemberId: number
  *   }

@@ -35,7 +35,7 @@ Run the installer:
 
 ```bash
 pnpm add kysely
-node ace add @julr/sesame --store=kysely
+node ace add @adonisjs/sesame --store=kysely
 ```
 
 The installer creates `config/sesame.ts` and `database/kysely_migrations/create_oauth_tables.ts`. It also registers the provider, commands, and named scope middleware.
@@ -46,7 +46,7 @@ Replace the generated `#services/kysely` placeholder with your application's con
 
 ```ts title="config/sesame.ts"
 import env from '#start/env'
-import { defineConfig, stores } from '@julr/sesame'
+import { defineConfig, stores } from '@adonisjs/sesame'
 
 export default defineConfig({
 	issuer: env.get('APP_URL'),

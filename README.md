@@ -1,9 +1,5 @@
 # Sésame
 
-<p align="center">
-  <img src="docs/assets/sesame-logo-readme.png" alt="Sésame" width="560" />
-</p>
-
 OAuth 2.1 + OpenID Connect server for AdonisJS.
 
 Sésame adds OAuth endpoints to your application. You keep your user accounts, login page, and consent UI.
@@ -21,7 +17,7 @@ Requires AdonisJS 7, Node.js 24 or later, and `@adonisjs/auth`.
 With Lucid and a session guard already configured:
 
 ```bash
-node ace add @julr/sesame
+node ace add @adonisjs/sesame
 node ace migration:run
 ```
 
@@ -31,7 +27,7 @@ See the [getting started guide](https://sesame.julr.dev/guides/getting-started/)
 
 ## Documentation
 
-[Read the documentation](https://sesame.julr.dev) for guides, API reference, and examples. Upgrading an existing installation? Follow the [0.8 migration guide](https://sesame.julr.dev/migrations/0-7-to-0-8/) or the [0.7 migration guide](https://sesame.julr.dev/migrations/0-6-to-0-7/).
+[Read the documentation](https://sesame.julr.dev) for guides, API reference, and examples. Coming from `@julr/sesame`? Follow the [package rename guide](https://sesame.julr.dev/migrations/julr-to-adonisjs/). Upgrading an existing installation? Follow the [0.8 migration guide](https://sesame.julr.dev/migrations/0-7-to-0-8/) or the [0.7 migration guide](https://sesame.julr.dev/migrations/0-6-to-0-7/).
 
 ## License
 

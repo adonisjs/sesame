@@ -26,7 +26,7 @@ For a confidential client, omit `--public` and answer the client type prompt. Th
 Use the initialized Sésame service from a seeder, command, or authenticated administration handler:
 
 ```ts
-import sesame from '@julr/sesame/services/main'
+import sesame from '@adonisjs/sesame/services/main'
 
 const { client, clientSecret } = await sesame.createClient({
 	name: 'Partner app',
@@ -47,7 +47,7 @@ Validate administrator input before calling management methods. These methods do
 Use its public `clientId`, not its internal record `id`:
 
 ```ts
-import sesame from '@julr/sesame/services/main'
+import sesame from '@adonisjs/sesame/services/main'
 
 const client = await sesame.findClient('CLIENT_ID')
 const ownedClients = await sesame.listClients({ userId: '42' })
@@ -65,7 +65,7 @@ Replace `CLIENT_ID` with the client ID from creation. Disabling the client preve
 After a secret leak, replace the confidential client's secret:
 
 ```ts
-import sesame from '@julr/sesame/services/main'
+import sesame from '@adonisjs/sesame/services/main'
 
 const newSecret = await sesame.rotateClientSecret('CLIENT_ID')
 ```

@@ -5,7 +5,7 @@ description: Sésame manager methods, OAuth guard methods, events, and extension
 
 ## Manager service
 
-The initialized default service is imported from `@julr/sesame/services/main`.
+The initialized default service is imported from `@adonisjs/sesame/services/main`.
 
 | Member                                               | Result or behavior                                                                                             |
 | ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
@@ -41,7 +41,7 @@ Approval scopes default to all requested scopes. An explicit list must be a none
 
 `userId` on single-grant update and revocation restricts the operation to that owner. These methods do not authenticate the calling application route. `listGrants` omits grants whose client no longer exists.
 
-Types include `ApproveAuthorizationOptions`, `DenyAuthorizationOptions`, `AuthorizationDecision`, `ListGrantsOptions`, `SesameGrant`, `RevokeGrantOptions`, `RevokeGrantsOptions`, `UpdateGrantOptions`, `GrantContext`, and the augmentable `SesameGrantContext` in `@julr/sesame/types`.
+Types include `ApproveAuthorizationOptions`, `DenyAuthorizationOptions`, `AuthorizationDecision`, `ListGrantsOptions`, `SesameGrant`, `RevokeGrantOptions`, `RevokeGrantsOptions`, `UpdateGrantOptions`, `GrantContext`, and the augmentable `SesameGrantContext` in `@adonisjs/sesame/types`.
 
 ## Client management
 
@@ -83,7 +83,7 @@ The stored `clientSecret` hash is non-enumerable on management results. Direct p
 
 ## OAuth guard
 
-`oauthGuard({ provider, resource?, requireAudience? })` is exported from `@julr/sesame/guard`. `resource` is the protected resource path for challenge metadata and audience checks. `requireAudience` defaults to false and, with a resource, rejects unbound tokens when true. Without a resource, no audience check runs.
+`oauthGuard({ provider, resource?, requireAudience? })` is exported from `@adonisjs/sesame/guard`. `resource` is the protected resource path for challenge metadata and audience checks. `requireAudience` defaults to false and, with a resource, rejects unbound tokens when true. Without a resource, no audience check runs.
 
 | Member                                 | Behavior                                                                                                                                         |
 | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -121,12 +121,12 @@ The attempted event runs when guard authentication starts, including requests wi
 
 ## User providers and claims
 
-`OAuthUserProviderContract<User>` from `@julr/sesame/guard` requires `[symbols.PROVIDER_REAL_USER]`, `createUserForGuard(user)`, and `findById(identifier)`. A guard user has `getId()` and `getOriginal()`.
+`OAuthUserProviderContract<User>` from `@adonisjs/sesame/guard` requires `[symbols.PROVIDER_REAL_USER]`, `createUserForGuard(user)`, and `findById(identifier)`. A guard user has `getId()` and `getOriginal()`.
 
-The Lucid adapter `oauthUserProvider`, class `OAuthLucidUserProvider`, and type `OAuthLucidUserProviderOptions` are exported from `@julr/sesame/guard/lucid`.
+The Lucid adapter `oauthUserProvider`, class `OAuthLucidUserProvider`, and type `OAuthLucidUserProviderOptions` are exported from `@adonisjs/sesame/guard/lucid`.
 
-`OidcSubject`, `Scope`, and `collectOidcClaims` are exported from `@julr/sesame/types`. The helper combines claims mapped to granted scopes. Sésame filters protocol-managed `sub`, `iss`, `aud`, `exp`, `iat`, `nonce`, and `at_hash` from custom claims.
+`OidcSubject`, `Scope`, and `collectOidcClaims` are exported from `@adonisjs/sesame/types`. The helper combines claims mapped to granted scopes. Sésame filters protocol-managed `sub`, `iss`, `aud`, `exp`, `iat`, `nonce`, and `at_hash` from custom claims.
 
 ## Custom storage
 
-`SesameStore` and record types are exported from `@julr/sesame/storage/types`. Custom stores use an AdonisJS `ConfigProvider<SesameStore>`. Transactional issuance, legacy adoption, and purge behavior are specified in [the storage contract](/reference/storage/).
+`SesameStore` and record types are exported from `@adonisjs/sesame/storage/types`. Custom stores use an AdonisJS `ConfigProvider<SesameStore>`. Transactional issuance, legacy adoption, and purge behavior are specified in [the storage contract](/reference/storage/).

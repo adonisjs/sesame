@@ -33,7 +33,7 @@ This example uses Edge. Create `resources/views/oauth/consent.edge` for the view
 
 ```ts title="start/routes.ts"
 import router from '@adonisjs/core/services/router'
-import sesame from '@julr/sesame/services/main'
+import sesame from '@adonisjs/sesame/services/main'
 
 router.get('/oauth/consent', async ({ auth, request, response, view }) => {
 	await auth.authenticate()
@@ -93,7 +93,7 @@ For a custom decision field or validated application context, submit to your own
 ```ts title="app/controllers/oauth_consent_controller.ts"
 import type { HttpContext } from '@adonisjs/core/http'
 import vine from '@vinejs/vine'
-import sesame from '@julr/sesame/services/main'
+import sesame from '@adonisjs/sesame/services/main'
 
 const decisionValidator = vine.create({
 	auth_token: vine.string(),

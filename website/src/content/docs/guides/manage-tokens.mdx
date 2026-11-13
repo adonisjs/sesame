@@ -48,7 +48,7 @@ After client authentication succeeds, the endpoint returns 200 with `{}` even wh
 When your application deactivates or deletes a user, revoke that user's OAuth artifacts:
 
 ```ts
-import sesame from '@julr/sesame/services/main'
+import sesame from '@adonisjs/sesame/services/main'
 
 await sesame.revokeAllForUser('42')
 ```

@@ -2,8 +2,8 @@
   exports({ to: app.configPath('sesame.ts') })
 }}}
 import env from '#start/env'
-import { defineConfig, stores } from '@julr/sesame'
-import type { InferScopes } from '@julr/sesame/types'
+import { defineConfig, stores } from '@adonisjs/sesame'
+import type { InferScopes } from '@adonisjs/sesame/types'
 
 const sesameConfig = defineConfig({
   issuer: env.get('APP_URL'),
@@ -36,6 +36,6 @@ const sesameConfig = defineConfig({
 
 export default sesameConfig
 
-declare module '@julr/sesame/types' {
+declare module '@adonisjs/sesame/types' {
   interface SesameScopes extends InferScopes<typeof sesameConfig> {}
 }

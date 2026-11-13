@@ -11,7 +11,7 @@ In an authenticated session handler, derive the user ID from the session rather 
 
 ```ts title="start/routes.ts"
 import router from '@adonisjs/core/services/router'
-import sesame from '@julr/sesame/services/main'
+import sesame from '@adonisjs/sesame/services/main'
 
 router.get('/settings/connections', async ({ auth }) => {
 	const user = await auth.authenticate()
@@ -60,7 +60,7 @@ The context must be a plain JSON object or `null`. It is stored as supplied, so 
 Declare your context shape once:
 
 ```ts title="config/sesame.ts"
-declare module '@julr/sesame/types' {
+declare module '@adonisjs/sesame/types' {
 	interface SesameGrantContext {
 		teamId: number
 	}

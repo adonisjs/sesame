@@ -22,7 +22,7 @@ Authorization and consent use the default guard to identify the logged-in user.
 With your Lucid database configured, run:
 
 ```bash
-node ace add @julr/sesame
+node ace add @adonisjs/sesame
 node ace migration:run
 ```
 
@@ -36,8 +36,8 @@ Edit the generated config:
 
 ```ts title="config/sesame.ts"
 import env from '#start/env'
-import { defineConfig, stores } from '@julr/sesame'
-import type { InferScopes } from '@julr/sesame/types'
+import { defineConfig, stores } from '@adonisjs/sesame'
+import type { InferScopes } from '@adonisjs/sesame/types'
 
 const sesameConfig = defineConfig({
 	issuer: env.get('APP_URL'),
@@ -53,7 +53,7 @@ const sesameConfig = defineConfig({
 
 export default sesameConfig
 
-declare module '@julr/sesame/types' {
+declare module '@adonisjs/sesame/types' {
 	interface SesameScopes extends InferScopes<typeof sesameConfig> {}
 }
 ```
@@ -68,7 +68,7 @@ Mount OAuth endpoints under `/oauth` and discovery at the root:
 
 ```ts title="start/routes.ts"
 import router from '@adonisjs/core/services/router'
-import sesame from '@julr/sesame/services/main'
+import sesame from '@adonisjs/sesame/services/main'
 
 router.group(() => {
 	sesame.registerRoutes()

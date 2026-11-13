@@ -1,5 +1,5 @@
 {
-  "name": "@julr/sesame-website",
+  "name": "@adonisjs/sesame-website",
   "private": true,
   "type": "module",
   "scripts": {

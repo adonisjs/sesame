@@ -46,7 +46,7 @@ Anonymous resolutions use a per-process cache of at most 500 entries. Successes 
 
 ## Fetcher extension
 
-`ClientMetadataDocumentFetcher` and `isSpecialUseAddress` are exported from `@julr/sesame/client_id_metadata_documents/fetcher`.
+`ClientMetadataDocumentFetcher` and `isSpecialUseAddress` are exported from `@adonisjs/sesame/client_id_metadata_documents/fetcher`.
 
 The fetcher constructor accepts `isAddressAllowed(address)` and `ca`. `ca` replaces Node's default certificate authorities. The container resolves the fetcher, so an application provider or test can swap it. A subclass can override `fetch()` for fixture documents.
 

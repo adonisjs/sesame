@@ -24,7 +24,7 @@ Validate `OIDC_JWK` as a string in `start/env.ts` before reading it in the confi
 Keep your existing store, pages, and scope configuration. Add these imports:
 
 ```ts title="config/sesame.ts"
-import { oauthUserProvider } from '@julr/sesame/guard/lucid'
+import { oauthUserProvider } from '@adonisjs/sesame/guard/lucid'
 ```
 
 Add the OIDC options inside `defineConfig()`:
@@ -40,7 +40,7 @@ Both options are required. For users outside Lucid, use [your custom provider](/
 
 Add `getOidcClaims()` to the user returned by the provider. This example shows the method in a Lucid model. Keep your existing model's other fields and authentication behavior:
 
-Import `collectOidcClaims` from `@julr/sesame/types` and add this method to your existing model:
+Import `collectOidcClaims` from `@adonisjs/sesame/types` and add this method to your existing model:
 
 ```ts title="app/models/user.ts"
 getOidcClaims(scopes: Scope[]) {

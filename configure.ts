@@ -32,18 +32,18 @@ export async function configure(command: Configure) {
 
   // Register provider and commands
   await codemods.updateRcFile((rcFile) => {
-    rcFile.addProvider('@julr/sesame/sesame_provider').addCommand('@julr/sesame/commands')
+    rcFile.addProvider('@adonisjs/sesame/sesame_provider').addCommand('@adonisjs/sesame/commands')
   })
 
   // Register named middleware
   await codemods.registerMiddleware('named', [
     {
       name: 'scopes',
-      path: '@julr/sesame/scope_middleware',
+      path: '@adonisjs/sesame/scope_middleware',
     },
     {
       name: 'anyScope',
-      path: '@julr/sesame/any_scope_middleware',
+      path: '@adonisjs/sesame/any_scope_middleware',
     },
   ])
 }

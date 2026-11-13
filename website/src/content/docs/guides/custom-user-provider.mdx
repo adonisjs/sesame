@@ -11,7 +11,7 @@ This example assumes that `#services/database` exports `appDb`, a Kysely connect
 
 ```ts title="app/auth/kysely_oauth_user_provider.ts"
 import { symbols } from '@adonisjs/auth'
-import type { OAuthGuardUser, OAuthUserProviderContract } from '@julr/sesame/guard'
+import type { OAuthGuardUser, OAuthUserProviderContract } from '@adonisjs/sesame/guard'
 import { appDb } from '#services/database'
 
 type User = {
@@ -58,7 +58,7 @@ With `@adonisjs/session` configured, use the provider for the session guard and 
 ```ts title="config/auth.ts"
 import { defineConfig } from '@adonisjs/auth'
 import { sessionGuard } from '@adonisjs/auth/session'
-import { oauthGuard } from '@julr/sesame/guard'
+import { oauthGuard } from '@adonisjs/sesame/guard'
 import { kyselyOAuthUserProvider } from '../app/auth/kysely_oauth_user_provider.js'
 
 const authConfig = defineConfig({

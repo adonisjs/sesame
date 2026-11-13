@@ -64,7 +64,7 @@ The default removes revoked records and expired records beyond the retention win
 For application code, call the manager:
 
 ```ts
-import sesame from '@julr/sesame/services/main'
+import sesame from '@adonisjs/sesame/services/main'
 
 const result = await sesame.purgeTokens({ retentionHours: 168 })
 ```

@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config'
 import starlight from '@astrojs/starlight'
 import { docRedirects, legacyDocRedirects } from './src/integrations/legacy-doc-redirects.mjs'
 
-const repository = 'https://github.com/Julien-R44/sesame'
+const repository = 'https://github.com/adonisjs/sesame'
 
 export default defineConfig({
   site: 'https://sesame.julr.dev',
@@ -117,7 +117,11 @@ export default defineConfig({
         },
         {
           label: 'Migrations',
-          items: [{ slug: 'migrations/0-7-to-0-8' }, { slug: 'migrations/0-6-to-0-7' }],
+          items: [
+            { slug: 'migrations/julr-to-adonisjs' },
+            { slug: 'migrations/0-7-to-0-8' },
+            { slug: 'migrations/0-6-to-0-7' },
+          ],
         },
       ],
     }),

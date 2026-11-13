@@ -11,8 +11,8 @@ For a Lucid application with a `User` model at `#models/user`, keep the session 
 import { defineConfig } from '@adonisjs/auth'
 import { sessionGuard, sessionUserProvider } from '@adonisjs/auth/session'
 import type { InferAuthenticators, InferAuthEvents, Authenticators } from '@adonisjs/auth/types'
-import { oauthGuard } from '@julr/sesame/guard'
-import { oauthUserProvider } from '@julr/sesame/guard/lucid'
+import { oauthGuard } from '@adonisjs/sesame/guard'
+import { oauthUserProvider } from '@adonisjs/sesame/guard/lucid'
 
 const authConfig = defineConfig({
 	default: 'web',
@@ -87,7 +87,7 @@ For a route that requires a token, always authenticate `auth.use('oauth')` befor
 To restrict tokens to one API, register its resource and configure a matching guard. This example uses `/api/mcp`; replace it with your API path.
 
 ```ts title="start/routes.ts"
-import sesame from '@julr/sesame/services/main'
+import sesame from '@adonisjs/sesame/services/main'
 
 sesame.registerProtectedResource({ resource: '/api/mcp', scopes: ['read'] })
 ```
