@@ -8,7 +8,7 @@ const STORES = ['lucid', 'kysely']
 const VERSION_PATTERN = /^(\d+)\.(\d+)(?:\.0)?$/
 
 /**
- * Publish the database migrations required to upgrade Sésame.
+ * Publish the database migrations required to upgrade Sesame.
  *
  * Every stub of `stubs/migrations/upgrade_<major>_<minor>/<store>/` is
  * published, in file name order, so new releases only add stubs.
@@ -24,9 +24,9 @@ const VERSION_PATTERN = /^(\d+)\.(\d+)(?:\.0)?$/
  */
 export default class SesameUpgrade extends BaseCommand {
   static commandName = 'sesame:upgrade'
-  static description = 'Publish the database migrations needed to upgrade Sésame'
+  static description = 'Publish the database migrations needed to upgrade Sesame'
 
-  @args.string({ description: 'Sésame version you are upgrading to (e.g. 0.8 or 0.8.0)' })
+  @args.string({ description: 'Sesame version you are upgrading to (e.g. 0.8 or 0.8.0)' })
   declare version: string
 
   @flags.string({ description: 'Store driver used by the application (lucid or kysely)' })
@@ -60,7 +60,7 @@ export default class SesameUpgrade extends BaseCommand {
 
     const stubs = await this.#upgradeStubs(store)
     if (!stubs?.length) {
-      this.logger.error(`No ${store} upgrade migrations for Sésame ${this.version}`)
+      this.logger.error(`No ${store} upgrade migrations for Sesame ${this.version}`)
       this.exitCode = 1
       return
     }

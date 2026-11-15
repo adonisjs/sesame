@@ -1,6 +1,6 @@
 # Move from @julr/sesame to @adonisjs/sesame
 
-Sésame is now published as `@adonisjs/sesame`. The package name is the only change: the API, configuration, commands, and database schema are the same. You do not need to run new migrations.
+Sesame is now published as `@adonisjs/sesame`. The package name is the only change: the API, configuration, commands, and database schema are the same. You do not need to run new migrations.
 
 If your installation is older than 0.8, first upgrade with `@julr/sesame` by following the [0.8 migration guide](./0.7-to-0.8.md). Then switch packages.
 

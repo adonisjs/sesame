@@ -3,7 +3,7 @@ import { MysqlAdapter, type Kysely } from 'kysely'
 const GRANT_TABLES = ['oauth_authorization_codes', 'oauth_access_tokens', 'oauth_refresh_tokens']
 
 /**
- * Upgrade Sésame 0.7 OAuth tables to 0.8 grants. Existing codes and
+ * Upgrade Sesame 0.7 OAuth tables to 0.8 grants. Existing codes and
  * tokens keep working without a grant; refresh tokens are attached to
  * a new grant on their next rotation.
  */

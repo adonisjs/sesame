@@ -1,8 +1,8 @@
-# Sésame
+# Sesame
 
 OAuth 2.1 + OpenID Connect server for AdonisJS.
 
-Sésame adds OAuth endpoints to your application. You keep your user accounts, login page, and consent UI.
+Sesame adds OAuth endpoints to your application. You keep your user accounts, login page, and consent UI.
 
 - Authorization code flow with mandatory PKCE
 - Refresh token rotation, replay detection, and grant revocation

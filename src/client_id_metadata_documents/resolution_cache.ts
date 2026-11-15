@@ -9,7 +9,7 @@ import type {
  * persisted (unauthenticated authorize requests). Prevents an anonymous
  * caller from turning the authorization server into a fetch amplifier.
  *
- * Bound as a container singleton by the Sésame provider.
+ * Bound as a container singleton by the Sesame provider.
  */
 export class ClientMetadataDocumentResolutionCache {
   #entries = new Map<string, ResolutionCacheEntry>()

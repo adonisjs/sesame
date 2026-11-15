@@ -44,7 +44,7 @@ export interface PurgeResult {
 }
 
 /**
- * Central manager for the Sésame OAuth 2.1 server.
+ * Central manager for the Sesame OAuth 2.1 server.
  *
  * Holds the resolved configuration. Registered as a singleton
  * in the AdonisJS IoC container by `SesameProvider`.

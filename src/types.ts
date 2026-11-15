@@ -415,7 +415,7 @@ export interface ResolvedClientIdMetadataDocumentsConfig {
 }
 
 /**
- * User-facing configuration interface for Sésame.
+ * User-facing configuration interface for Sesame.
  *
  * Provides all options needed to set up the OAuth 2.1 authorization
  * server, including issuer identity, scopes, token lifetimes, and
@@ -571,7 +571,7 @@ export interface SesameConfig {
   idTokenTtl?: string
 
   /**
-   * Resource servers hosted outside this application whose tokens Sésame
+   * Resource servers hosted outside this application whose tokens Sesame
    * issues, as absolute http(s) URIs (for example `https://api.example.com`).
    * Clients request one with the `resource` parameter (RFC 8707), and it
    * becomes the `aud` of JWT access tokens. Resources served by this
@@ -584,7 +584,7 @@ export interface SesameConfig {
   /**
    * Format of issued access tokens. `'opaque'` issues random strings;
    * `'jwt'` issues RFC 9068 JWTs signed with `jwk`, which resource
-   * servers can verify against the JWKS without calling Sésame.
+   * servers can verify against the JWKS without calling Sesame.
    * Either way, only the token hash is stored, so revocation,
    * introspection, and the guard behave the same.
    * Defaults to `'opaque'`.

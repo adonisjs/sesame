@@ -11,7 +11,7 @@ const TABLES = [
 ]
 
 /**
- * Sésame 0.8: store the resource (RFC 8707) that authorization requests,
+ * Sesame 0.8: store the resource (RFC 8707) that authorization requests,
  * codes, and tokens are bound to. Existing rows stay unbound (null).
  */
 export async function up(db: Kysely<any>): Promise<void> {

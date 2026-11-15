@@ -1,5 +1,5 @@
 /**
- * OIDC `prompt` values acted upon by Sésame and advertised in
+ * OIDC `prompt` values acted upon by Sesame and advertised in
  * `prompt_values_supported`. Other values (`login`, `select_account`,
  * `create`) are accepted but ignored.
  *

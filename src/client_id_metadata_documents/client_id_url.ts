@@ -15,7 +15,7 @@ const HTTPS_SCHEME = /^https:\/\//i
 
 /**
  * Whether a `client_id` must be resolved through a Client ID Metadata
- * Document. Sésame-generated client ids are hex strings, so they never
+ * Document. Sesame-generated client ids are hex strings, so they never
  * start with `https://` (draft §7.1).
  */
 export function isClientIdMetadataDocumentUrl(clientId: string) {

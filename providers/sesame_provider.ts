@@ -4,7 +4,7 @@ import { ClientMetadataDocumentResolutionCache } from '../src/client_id_metadata
 import type { ResolvedSesameConfig } from '../src/types.ts'
 
 /**
- * AdonisJS service provider for the Sésame OAuth 2.1 server.
+ * AdonisJS service provider for the Sesame OAuth 2.1 server.
  */
 export default class SesameProvider {
   #app: ApplicationService
